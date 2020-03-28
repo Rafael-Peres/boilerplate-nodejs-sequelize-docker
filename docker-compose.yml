@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: '123456'
+      DATABASE_URL=postgres: //username:postgres@db:5432/sequelize
+    ports:
+      - '15438:5438'
+    networks:
+      - databases
+
+  app:
+    build: .
+    command: yarn dev
+    ports:
+      - '3938:3938'
+    volumes:
+      - .:/usr/app
+
+networks:
+  databases:
+    driver: bridge
