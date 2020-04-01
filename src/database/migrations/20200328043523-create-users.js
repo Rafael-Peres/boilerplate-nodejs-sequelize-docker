@@ -35,6 +35,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-      return queryInterface.dropTable('users_ovo');
+      return queryInterface.dropTable('users');
   }
 };
