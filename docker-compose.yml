@@ -11,13 +11,25 @@ services:
     networks:
       - databases
 
-  # app:
-  #   build: .
-  #   command: yarn dev
-  #   ports:
-  #     - '3938:3938'
-  #   volumes:
-  #     - .:/usr/app
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "postgres"
+      PGADMIN_DEFAULT_PASSWORD: "123456"
+    ports:
+      - "5433:80"
+    depends_on:
+      - postgres
+    networks:
+      - databases
+
+  app:
+    build: .
+    command: yarn dev
+    ports:
+      - '3938:3938'
+    volumes:
+      - .:/usr/app
 
 networks:
   databases:
