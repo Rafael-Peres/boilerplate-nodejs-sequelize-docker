@@ -1,0 +1,10 @@
+yarn run v1.22.4
+$ /home/rafael/studies/test-sequelize/node_modules/.bin/sequelize db:migrate:undo
+
+[4mSequelize CLI [Node: 12.16.1, CLI: 5.5.1, ORM: 5.21.5][24m
+
+Loaded configuration file "src/config/database.js".
+== 20200328043523-create-users: reverting =======
+== 20200328043523-create-users: reverted (0.009s)
+
+Done in 0.32s.

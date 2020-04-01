@@ -2,9 +2,9 @@ import Sequelize from 'sequelize'
 import databaseConfig from '../database'
 
 import Avatar from '../app/models/Avatar'
-import User from '../app/models/User'
+import UserOvo from '../app/models/User'
 
-const models = [User, Avatar]
+const models = [UserOvo, Avatar]
 class Database {
   contructor() {
     this.init()

@@ -16,8 +16,8 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        reference: {
-          model: 'users',
+        references: {
+          model: 'users_ovo',
           key: 'id',
         },
         onUpdate: 'CASCADE',
