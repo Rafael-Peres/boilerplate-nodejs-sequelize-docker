@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-   return queryInterface.createTable('users_ovo', {
+   return queryInterface.createTable('users', {
     id: {
       type: Sequelize.INTEGER,
       allowNull: false,
